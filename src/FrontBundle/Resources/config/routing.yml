@@ -1,0 +1,15 @@
+front_homepage:
+    path:     /
+    defaults: { _controller: FrontBundle:Default:index }
+showActu:
+    path:     /actu
+    defaults: { _controller: FrontBundle:Default:showActu }
+
+show:
+    path:     /show
+    defaults: { _controller: FrontBundle:Default:show }
+
+
+rechV:
+    path:     /rechv
+    defaults: { _controller: FrontBundle:Default:rechercheV}

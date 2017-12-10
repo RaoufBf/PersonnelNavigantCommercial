@@ -1,0 +1,46 @@
+{% extends"FrontBundle::layout2.html.twig" %}
+{% block calender %}
+<h2>Liste des Pnc</h2>
+<table border="1" class="table-responsive">
+    <tr>
+        <td>id</td>
+        <td>title</td>
+        <td>start</td>
+        <td>end</td>
+
+        <td>escale de depart</td>
+        <td>escale de arrivee</td>
+
+        <td>matPnc</td>
+
+
+    </tr>
+
+
+    {% for m in rec %}
+        <tr>
+            <td>{{ m.id }}</td>
+            <td>{{ m.title }}</td>
+            <td>{{ m.start|date("d/m/Y") }}</td>
+            <td>{{ m.end |date("d/m/Y")}}</td>
+
+            <td>{{ m.edepart }}</td>
+            <td>{{ m.earrive }}</td>
+
+            <td>{{ m.matPnc.id }}</td>
+
+
+
+        </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}
+
+
+
+
+
+
+
+

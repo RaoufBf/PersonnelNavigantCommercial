@@ -1,0 +1,17 @@
+{% extends"FrontBundle::layout2.html.twig" %}
+{% block calender %}
+    <h2>Liste des actualités</h2>
+    {% for m in rec %}
+
+        <div class="bg-faded p-4 my-4">
+
+
+
+
+            <strong class="tagline-up" >{{ m.name }} </strong><code >{{ m.dateofcration|date("d/m/Y") }}</code>
+
+            <h4 class="tagline-lower">{{ m.text }}</h4>
+
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,39 @@
+
+{% extends"FrontBundle::layout2.html.twig" %}
+{% block calender %}
+
+
+<h2>Recherche Par Numero De Vol</h2>
+<form method="POST"  action="">
+
+    Numero d'vole : <input type="text" placeholder="saisir le num de vol" name="numv"/>
+
+    <input type="submit" value="chercher"/>
+</form>
+<table border="2" class="table-responsive">
+    <tr>
+        <td>NumeroVol</td>
+        <td>Matricule</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+
+    </tr>
+
+
+    {% for m in rec %}
+        <tr>
+            <td>{{ m.numVole }}</td>
+            <td>{{ m.matPnc.id }}</td>
+            <td>{{ m.matPnc.username }}</td>
+            <td>{{ m.matPnc.email }}</td>
+
+
+
+        </tr>
+    {% endfor %}
+
+
+
+</table>
+
+{% endblock %}

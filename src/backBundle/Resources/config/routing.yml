@@ -1,0 +1,4 @@
+back_homepage:
+    path:     /back
+    defaults: { _controller: backBundle:Default:index }
+
